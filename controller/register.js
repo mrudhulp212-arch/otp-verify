@@ -37,7 +37,6 @@ export const generateOTP = async (req, res) => {
     userExist.otpExpire = otpExpire;
     await userExist.save();
 
-
     sendOtp(email, otp); //import
     res.status(200).json({ message: "OTP sent successfullyn" });
   } catch (error) {
