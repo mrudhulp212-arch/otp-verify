@@ -65,6 +65,6 @@ export const verifyOTP = async (req, res) => {
     await exist.save();
     res.status(200).json({ message: "OTP verified successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server errors" });
   }
 };
